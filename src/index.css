@@ -1,0 +1,17 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Microsoft YaHei';
+  color: #333;
+  /* background-color: rgb(255, 255, 255); */
+  background-color: #000 !important;
+
+}
+/* html[theme='dark-mode'] {
+  filter: invert(1) hue-rotate(180deg);
+} */
+
+
+* {
+  box-sizing: border-box;
+}
