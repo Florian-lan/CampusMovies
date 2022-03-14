@@ -1,0 +1,93 @@
+.footer-top{
+    margin-top: 30px;
+
+    // footer-top颜色 和header一致
+    background: #121212;
+
+    .footer-top-content{
+        padding: 40px 30px 40px 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .follow{
+        margin-left: 150px;
+        .follow-text{
+            color: #d4d4d5;
+            font-size: 25px;
+        }
+        .follow-links{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            width: 200px;
+            padding-inline-start: 20px;
+            margin-top:20px;
+
+            .follow-links-logo{
+                color: #d4d4d5;
+            }
+        }
+
+
+    }
+    .subscribe{
+        margin-right: 100px;
+        .subscribe-text{
+            color:#d4d4d5;
+            font-size: 25px;
+
+        }
+        .subscribe-input{
+            position: relative;
+            border: 1px solid hsla(210,8%,51%,.09);
+            border-radius: 20px;
+            width: 400px;
+            height: 40px;
+            padding-left: 25px;
+            padding-right: 5px;
+            margin-top: 20px;
+            color: #d4d4d5;
+            background-color: transparent;
+            .ant-input{
+                background-color: transparent;
+                color:#d4d4d5;
+            }
+            .input-button{
+                position: absolute;
+                height: 40px;
+                right: 0px;
+
+                width: 80px;
+
+
+                border: 1px solid hsla(210,8%,51%,.09);
+                &::before{
+                    background: #fff;
+                    opacity: 0.6;
+                }
+            }
+            &:hover{
+                border-color:#d4d4d5;
+            }
+            
+        }
+    }
+
+}
+
+
+
+.ant-message{
+    .my-message{
+        .ant-message-notice-content{
+            color: white;
+            border-radius:10px;
+            background: #121212;
+
+        }
+        
+
+    }
+}

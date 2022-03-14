@@ -5,20 +5,19 @@
     font-weight: 300;
     box-sizing: border-box;
     margin: 0px;
+    padding: 15px 0;
     border: 0px;
     outline: 0px;
     font-size: 100%;
     vertical-align: baseline;
-    position: absolute;
-    left: 0px;
-    right: 0px;
+
+
     width: 100%;
     z-index: 20;
     // background: rgb(253, 183, 59);
+    // header颜色
     background: #121212;
-    padding: 0 env(safe-area-inset-right);
     display: block;
-    height: 60px;
 
     .header {
         line-height: 1;
@@ -62,9 +61,13 @@
             li,.ant-menu-item {
                 &:hover::after {
                 border-bottom: 2px solid #fff ;
+                width: 50px;
+                left: 12px;
+                right:0px;
+
                 }
                 a{
-                    color: white;
+                    color: #d4d4d5;
                     /* list-style: none; */
                     position: relative;
                     top: 10px;

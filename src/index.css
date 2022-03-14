@@ -1,3 +1,12 @@
+:root{
+  --color-black:#000;
+  --color-black-minus:#121212;
+  --color-text-white: #d4d4d5;
+  --color-text-grey:#757576;
+  --color-grey-plus:#363636;
+  --color-text-red:#EE4F51;
+  --color-subject-yellow:#F5C518;
+}
 html,
 body {
   height: 100%;
@@ -5,6 +14,7 @@ body {
   color: #333;
   /* background-color: rgb(255, 255, 255); */
   background-color: #000 !important;
+
 
 }
 /* html[theme='dark-mode'] {
@@ -14,4 +24,21 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+
+.annotation{
+
+
+  /* 背景颜色记录： */
+  color:#000;
+  /* header淡灰色 */
+  color:#121212; 
+  /* 字体白-  footer-top*/
+  color:#d4d4d5;
+  /* 字体偏灰 footer-bottom */
+  color:#757576;
+  /* 灰色border footer-bottom */
+  color:#363636;
+
 }

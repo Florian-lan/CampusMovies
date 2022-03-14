@@ -2,6 +2,9 @@
 
 ## 技术栈
 React + ReactHook + ReactRouter + Redux + Axios + Less + 第三方
+CSS module: [CSSmodule介绍和使用](http://www.ruanyifeng.com/blog/2016/06/css_modules.html)
+* redux可用recoil替代，recoil更简单但没那么全面 *
+
 
 ## 计划完成功能
 1. 首页展示
@@ -42,4 +45,7 @@ npm install --save axios
 2. 克隆到本地 *git clone ...*
 3. 
 
-
+## 知识点
+1.[CSS清除浮动原理理解](https://juejin.cn/post/6844903504545316877)
+2. [grid布局的使](https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
+3. 按钮优化

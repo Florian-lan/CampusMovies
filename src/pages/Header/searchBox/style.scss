@@ -1,6 +1,16 @@
 
-.ant-input-affix-wrapper{
-    width: 500px;
-    border-radius:20px;
+.input{
+    .ant-input-affix-wrapper-lg{
+        width: 100px;
+        border-radius:20px;
+        background: transparent;
+        color: #757576;
+        &:hover{
+            border: 1px solid #40a9ff;
+        }
+        .ant-input{
+            background: transparent;
+        }
+    }
 
 }
