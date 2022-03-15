@@ -5,7 +5,7 @@
     font-weight: 300;
     box-sizing: border-box;
     margin: 0px;
-    padding: 15px 0;
+    padding: 5px 0;
     border: 0px;
     outline: 0px;
     font-size: 100%;
@@ -45,8 +45,17 @@
     }
 
     .search .ant-input-affix-wrapper {
-        width: 500px;
+        width: 600px;
         border-radius: 20px;
+        font-size: 15px !important;
+
+        >input {
+            font-size: 15px;
+        }
+
+        >span {
+            margin-right: 10px;
+        }
 
     }
 
@@ -58,29 +67,33 @@
             justify-content: space-evenly;
             background: transparent;
             border-bottom: 1px solid #000;
-            li,.ant-menu-item {
+
+            li,
+            .ant-menu-item {
                 &:hover::after {
-                border-bottom: 2px solid #fff ;
-                width: 50px;
-                left: 12px;
-                right:0px;
+                    border-bottom: 2px solid #fff;
+                    width: 50px;
+                    left: 12px;
+                    right: 0px;
 
                 }
-                a{
+
+                a {
                     color: #d4d4d5;
                     /* list-style: none; */
                     position: relative;
                     top: 10px;
                     font-size: larger;
                     text-decoration: none;
-                    :hover{
-                        color:#fff ;
+
+                    :hover {
+                        color: #fff;
                     }
                 }
             }
-            
+
         }
-    
+
 
     }
 

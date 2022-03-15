@@ -1,4 +1,5 @@
 import React from "react";
+// import style from "./style.module.scss";
 import "./style.scss";
 import { Card, Avatar, Popover } from 'antd';
 import { EditOutlined, EllipsisOutlined, SettingOutlined, HeartOutlined, EyeOutlined } from '@ant-design/icons';
