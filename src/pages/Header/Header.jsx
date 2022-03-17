@@ -31,7 +31,7 @@ const Header = () => {
                     <nav className="navbar navbar-light ">
                         <div className="container">
                             <a className="navbar-brand" href="#">
-                                <img src='image/logo_Desktop.svg' alt='homepage' width="121" height="31" />
+                                <img src='/image/logo_Desktop.svg' alt='homepage' width="121" height="31" />
                             </a>
                         </div>
                     </nav>
@@ -51,17 +51,17 @@ const Header = () => {
 
                                 <Menu.Item key="show">
                                     <a href="/" target="_blank" rel="noopener noreferrer">
-                                        演出
+                                        主页
                                     </a>
                                 </Menu.Item>
                                 <Menu.Item key="theaters">
-                                    <a href="/" target="_blank" rel="noopener noreferrer">
-                                        剧院
+                                    <a href="/store" target="_blank" rel="noopener noreferrer">
+                                        影库
                                     </a>
                                 </Menu.Item>
                                 <Menu.Item key="news">
                                     <a href="/" target="_blank" rel="noopener noreferrer">
-                                        讯息
+                                        我的
                                     </a>
                                 </Menu.Item>
                             </Menu>
@@ -81,7 +81,7 @@ const Header = () => {
                             <nav className="navbar navbar-light ">
                                 <div className="container">
                                     <a className="navbar-brand" href="#">
-                                        <img src='image/person-circle.svg' alt='user' width="30" height="30" />
+                                        <img src='/image/person-circle.svg' alt='user' width="30" height="30" />
                                     </a>
                                 </div>
                             </nav>

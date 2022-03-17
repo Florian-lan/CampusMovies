@@ -13,8 +13,11 @@ import { Tabs } from 'antd';
 
 
 
-const Store = () => {
+const MovieStore = () => {
     const { TabPane } = Tabs;
+
+    const [movieModalShow, setMovieModalShow] = useState(false);
+    const [movieModalInfo, setMovieModalInfo] = useState();
 
     // 取movieInfo信息
     const movieInfoList = useSelector(state => {
@@ -40,10 +43,36 @@ const Store = () => {
 
                     <Tabs defaultActiveKey="1" onChange={callback}>
                         <TabPane tab="所有电影" key="1">
-                            Content of Tab Pane 1
+                            {
+                                <>
+                                <div className="item-grid">
+
+                                    {
+
+                                        movieInfoList?.map((val, index) => {
+                                            {/* console.log(setMovieModalShow) */ }
+                                            return (
+                                                <MovieBox
+                                                    key={index}
+                                                    movieInfo={val}
+                                                    setMovieModalShow={setMovieModalShow}
+                                                    setMovieModalInfo={setMovieModalInfo}
+                                                />
+                                            )
+
+                                        })
+                                    }
+                                </div>
+                                <MovieModal showState={movieModalShow} setShowState={setMovieModalShow} movieModalInfo={movieModalInfo}/>
+                                </>
+                                
+
+                            }
                         </TabPane>
                         <TabPane tab="所有演出" key="2">
-                            Content of Tab Pane 2
+                            {
+                                <PrimaryTag content="dfs" />
+                            }
                         </TabPane>
                         <TabPane tab="我喜欢的" key="3">
                             Content of Tab Pane 3
@@ -51,25 +80,8 @@ const Store = () => {
                     </Tabs>
 
                     <div className="content-item">
-                    <PrimaryTag content={"teste"}/>
-                        <div className="item-grid">
-                        
-                            {
 
-                                movieInfoList?.map((val, index) => {
-                                    {/* console.log(setMovieModalShow) */ }
-                                    return (
-                                        <MovieBox
-                                            key={index}
-                                            movieInfo={val}
-                                            setMovieModalShow={null}
-                                            setMovieModalInfo={null}
-                                        />
-                                    )
 
-                                })
-                            }
-                        </div>
                     </div>
                 </section>
             </section>
@@ -81,6 +93,6 @@ const Store = () => {
 
 }
 
-export default Store;
+export default MovieStore;
 
 

@@ -1,14 +1,15 @@
 # Net-Movie
 
 ## 技术栈
-React + ReactHook + ReactRouter + Redux + Axios + Less + 第三方
+React + ReactHook + ReactRouter + Redux + Axios + Scss + 第三方 + lodash(实用js工具库)
 CSS module: [CSSmodule介绍和使用](http://www.ruanyifeng.com/blog/2016/06/css_modules.html)
+
 * redux可用recoil替代，recoil更简单但没那么全面 *
+
 
 
 ## 计划完成功能
 1. 首页展示
-2. 影厅管理
 3. 搜索功能
 4. 上拉加载
 

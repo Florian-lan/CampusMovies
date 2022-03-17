@@ -2,11 +2,14 @@
   --color-black:#000;
   --color-white:#FFF;
   --color-black-minus:#121212;
-  --color-text-white: #d4d4d5;
+  --color-text-white: #d4d4d5; 
   --color-text-grey:#757576;
+
+  /* 一般用于border */
   --color-grey-plus:#363636;
   --color-text-red:#EE4F51;
   --color-subject-yellow:#F5C518;
+  --color-subject-blue:#5799EF;
 }
 html,
 body {

@@ -1,98 +1,129 @@
-:global{
-    .ant-modal{
-        .ant-modal-content{
-            color: var(--color-text-white);
-            background-color: var(--color-black-minus);
-            border-radius: 20px;
-            border: 2px solid var(--color-subject-yellow);
-            .ant-modal-close{
+.movieModalWrapper {
 
-                    color: white;
+    // color: white;
+    // font-size: 20px;
+    :global {
+        .ant-modal {
+            .ant-modal-content {
+               
+                border-radius: 20px;
+                border: 2px solid var(--color-subject-yellow);
+               
+
+               
+
+
+               
+
+            }
+        }
+
+    }
+
+}
+:global{
+    .standardModal{
+        .ant-modal{
+            .ant-modal-content{
+                color: var(--color-text-white);
+                background-color: var(--color-black-minus);
+                .ant-modal-close {
+
+                    color: var(--color-text-white);
                     padding-top: 5px;
                     padding-right: 10px;
-                    .ant-modal-close-x{
+
+                    .ant-modal-close-x {
                         width: 30px;
                         height: 30px;
                         line-height: 30px;
                     }
-                    &:hover{
-                        color:var(--color-subject-yellow);
+
+                    &:hover {
+                        color: var(--color-subject-yellow);
                     }
                 }
-    
+                .ant-modal-body {
+                    padding: 40px 15px 15px 15px;
 
-            .ant-modal-body{
-                padding: 40px 15px 15px 15px;
 
+
+                }
                 
-
+                
             }
-    
         }
     }
-
 }
-.modal-body{
+
+.modal-body {
     display: flex;
     flex-direction: column;
-    .modal-content{
+
+    .modal-content {
         display: flex;
         flex-direction: row;
-        
-    
-        .modal-content-poster-container{
+
+
+        .modal-content-poster-container {
             max-width: 400px;
             padding-left: 10px;
             // width: 30%;
             width: 160px;
-            .modal-content-poster{
-                .modal-content-poster-img{
-                    width: 150px;   
+
+            .modal-content-poster {
+                .modal-content-poster-img {
+                    width: 150px;
                 }
-            
-                
+
+
             }
-            .modal-content-poster-title{
+
+            .modal-content-poster-title {
                 padding-top: 5px;
                 text-align: center;
                 font-weight: 800;
                 font-size: 25px;
-    
-                .poster-title{
+
+                .poster-title {
                     // color:var(--color-text-white);
-                    color:var(--color-subject-yellow);
+                    color: var(--color-subject-yellow);
                 }
             }
-    
+
         }
-        .modal-content-info{
+
+        .modal-content-info {
             display: flex;
             flex-direction: column;
             padding-left: 10px;
-            .info-genresAndPlots{
+
+            .info-genresAndPlots {
                 padding-bottom: 5px;
-    
-                .info-genres{
+
+                .info-genres {
                     display: inline-flex;
                     flex-wrap: wrap;
                     padding-bottom: 10px;
-    
+
                 }
-                .info-plots{
+
+                .info-plots {
                     padding-left: 5px;
                     margin-bottom: 10px;
-                    .info-plots.span{
-    
-                    }
-    
+
+                    .info-plots.span {}
+
                 }
-    
+
             }
-            .info-principal-credits{
+
+            .info-principal-credits {
                 display: block;
                 border: 0;
                 padding: 0;
-                .credits-list{
+
+                .credits-list {
                     color: var(--color-text-white);
                     padding: 0;
                     margin: 0;
@@ -100,8 +131,9 @@
                     flex-direction: column;
                     list-style: none;
                     padding: 0;
-                    .credits-list-item{
-    
+
+                    .credits-list-item {
+
                         border-top: 1px solid var(--color-grey-plus);
                         display: flex;
                         align-items: center;
@@ -109,50 +141,55 @@
                         padding: 5px 0px;
                         position: relative;
                         cursor: pointer;
-                        .item-label{
+
+                        .item-label {
                             font-size: 20px;
                             line-height: 35px;
                             font-weight: bold;
-    
+
                         }
-                        .item-content-list{
+
+                        .item-content-list {
                             padding-left: 10px;
                             list-style: none;
                             font-size: 15px;
                             text-decoration: none;
                             display: inline-flex;
                             // color:var(--color-text-red);
-                            color:var(--color-subject-yellow);
-    
-                            .item-content-list-item{
+                            color: var(--color-subject-yellow);
+
+                            .item-content-list-item {
                                 vertical-align: middle;
                                 font-size: 15px;
                                 line-height: 15px;
 
                                 padding: 0px 10px;
-                                &:not(:last-child){
+
+                                &:not(:last-child) {
                                     border-right: 1px solid var(--color-grey-plus);
                                 }
-                                .specific-item-content{
-    
-                                }
-    
+
+                                .specific-item-content {}
+
                             }
-    
+
                         }
-    
+
                     }
                 }
-    
+
             }
         }
     }
-    .modal-func{
+
+    .modal-func {
         text-align: center;
         margin: 10px 0 5px 0;
-        .modal-btn{
+
+        .modal-btn {
             border: 1px solid var(--color-grey-plus);
-            &:hover{
+
+            &:hover {
                 border: 1px solid var(--color-subject-yellow) !important;
                 color: var(--color-subject-yellow) !important;
             }
@@ -160,5 +197,3 @@
 
     }
 }
-
-

@@ -1,0 +1,54 @@
+.ant-list {
+    text-align: left;
+    .ant-list-header {
+        color: var(--color-text-grey);
+        border-bottom: 1px solid var(--color-grey-plus) !important;
+        
+
+    }
+
+    .ant-spin-nested-loading {
+        .ant-spin-container {
+            .ant-list-items {
+                .ant-comment{
+                    // border-bottom: 1px solid var(--color-text-grey);
+
+                    .ant-comment-inner {
+                        .ant-comment-avatar {
+                            >img {
+                                background: var(--color-grey-plus);
+                                // border: 1px solid var(--color-text-grey);
+                                border: 1px solid var(--color-subject-yellow);
+
+                            }
+
+
+
+                        }
+
+                        .ant-comment-content {
+                            .ant-comment-content-author {
+                                .ant-comment-content-author-name {
+                                    // color: var(--color-text-white);
+                                    color: var(--color-subject-yellow);
+                                }
+
+                                .ant-comment-content-author-time {
+                                    color: var(--color-text-grey);
+                                }
+
+
+                            }
+
+                            .ant-comment-content-detail {
+                                color: var(--color-text-white);
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

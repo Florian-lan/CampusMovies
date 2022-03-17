@@ -1,0 +1,178 @@
+.details-wrapper {
+    margin: 0 100px;
+    position: relative;
+
+    .details-body {
+        padding-top: 20px;
+        .details-header{
+            display: flex;
+            flex-direction: row;
+            .header-title{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin: 10px 20px 10px 0;
+                .main{
+                    text-align: left;
+                    // color: var(--color-text-white);
+                    color: var(--color-white);
+                    font-size: 3rem;
+                }
+                .auxiliary{
+                    display: flex;
+                    flex-direction: column;
+                    .auxiliary-list{
+                        display: flex;
+                        flex-direction: row;
+                        color: var(--color-text-grey);
+                        list-style: none;
+                        text-align: left;
+                        padding-left: 0;
+                        .list-items{
+                            display: inline-block;
+                            vertical-align: middle;
+                            &:not(:first-child)::before{
+                                display: inline-block;
+                                margin: 0 .5rem .2rem;
+                                content: "";
+                                font-size: 1rem;
+                                line-height: .5rem;
+                                padding: 1px;
+                                border-radius: 50%;
+                                vertical-align: middle;
+                                background-color: currentColor;
+                            }
+                        }
+                    }
+                }
+            }
+            .header-rate{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end; 
+                padding-bottom: 30px;
+                .aggregate-rating{
+                    display: inline-flex;
+                    flex-direction: column;
+                    .rating-title{
+                        color: var(--color-text-grey);
+                        font-size: 5px;
+                        font-weight: 700;
+                    }
+                    .rating-box{
+                        display: flex;
+                        /* flex-direction: row; */
+                        color: var(--color-text-grey);
+                        /* margin-top: 5px; */
+                        padding: 0 8px;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                        .rating-box-content{
+
+                            display: flex;
+                            flex-direction: row;
+                            .rating-box-content-star{
+                                margin-right: 8px;
+                                > img{
+                                    width: 30px;
+                                    height: 30px;
+                                    // 用于修改svg颜色,要在svg中fill设置为currentColor
+                                    // 原理就是生成一个阴影，而阴影的颜色可以自己设置，然后把原来的svg移走即可
+                                    filter: drop-shadow(2000px 0 0 var(--color-subject-yellow));
+                                     transform: translate(-2000px);
+                                }
+
+                            }
+                            .rating-box-content-number{
+                                .number{
+                                    color: white;
+                                    font-size: 20px;
+                                }
+                                .number2{
+                                    margin-left: 7px;
+                                }
+
+                            }
+                        }
+                    }
+
+                }
+                .user-rating{
+                    display: inline-flex;
+                    flex-direction: column;
+                    // background: #fff;
+
+                    .rating-title{
+                        color: var(--color-text-grey);
+                        font-size: 5px;
+                        font-weight: 700;
+                    }
+                    .rating-box{
+                        display: flex;
+                        /* flex-direction: row; */
+                        color: var(--color-text-grey);
+                        /* margin-top: 5px; */
+                        padding: 0 8px;
+                        position: relative;
+                        // 注意伪元素必须添加content
+                        &::before{
+                            background: #fff;
+                            content:"";
+                            opacity: 0;
+                            position: absolute;
+                            width: 100%;
+                            /* width: 100%; */
+                            height: 100%;
+                            border: 1px solid transparent;
+                            border-radius: 10px;
+                            top: 0;
+                            left: 0;
+                        }
+                        &:hover{
+                            text-decoration: none;
+                            &::before{
+                                opacity: 0.08;
+                            }
+                        }
+                        
+
+                        .rating-box-content{
+                            
+                           
+                            display: flex;
+                            flex-direction: row; 
+                            width: 100px;
+                            /* text-align: center; */
+                            justify-content: center;
+                            .rating-box-content-star{
+                                margin-right: 8px;
+                                > img{
+                                    width: 30px;
+                                    height: 30px;
+                                    // 用于修改svg颜色
+                                    filter: drop-shadow(2000px 0 0 var(--color-subject-blue));
+                                     transform: translate(-2000px);
+                                }
+
+                            }
+                            .rating-box-content-text{
+
+
+                                font-size: 20px;
+                                font-weight: 500;
+                                color: var(--color-subject-blue);
+
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        .body-comments{
+            margin-top:30px;
+        }
+
+    }
+}

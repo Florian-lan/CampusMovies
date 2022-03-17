@@ -8,6 +8,8 @@ const ConfirmBtn = (
         loading,
         className,
         onClick,
+        type,
+        htmlType,
         ...props
     }
 ) => {
@@ -16,6 +18,8 @@ const ConfirmBtn = (
             className={`${style['primary-button']} ${style['btn-glitch']} ${className ? className : ' '}`}
             loading={loading}
             onClick={onClick}
+            type={type ? type : "default"}
+            htmlType={htmlType ? htmlType : "button"}
         >
             {text}
             {props.children}

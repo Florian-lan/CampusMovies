@@ -71,6 +71,7 @@ const FooterTop = () => {
 
                                 className="input-button"
                                 loading={loading}
+                                // loading={true}
                                 onClick= {handleClick}
                                 text="订阅"
                             >

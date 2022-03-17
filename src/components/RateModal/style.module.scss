@@ -1,0 +1,48 @@
+
+.rate-modal-wrapper{
+    :global{
+        .ant-modal{
+            width: 600px !important; 
+
+        .ant-modal-content{
+            width: 600px;
+            border: 1px solid transparent;
+            border-radius: 40px;
+        
+        }
+    }
+    .ant-rate{
+        margin-bottom: 20px;
+        
+        }
+    }
+
+
+    }
+    
+
+
+
+    
+   
+
+
+
+.rate-body{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    .body-header{
+        color: var(--color-subject-yellow);
+        font-size: 10px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    .body-title{
+        color: var(--color-text-white);
+        font-size: 30px;
+
+    }
+}
+ 

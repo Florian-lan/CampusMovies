@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useCallback, useEffect} from "react";
 import AppRouter from './router/AppRouter';
 import Header from './pages/Header/Header';
 import Footer from './pages/Footer/Footer'
@@ -10,6 +10,7 @@ import {
 } from './redux/movieReducers/action';
 
 import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 
 
 
@@ -17,11 +18,12 @@ import { useDispatch } from "react-redux";
 
 const App = (props) => {
     const dispatch = useDispatch();
-
     useEffect(() => {
         // 清除缓存数据，测试阶段需要，后续可以删去
         localStorage.clear();
-
+        
+        
+        
         // 获取/加载测试数据
         if(!localStorage.getItem('movieInfo')){
             localStorage.setItem('movieInfo',JSON.stringify(MovieInfo));

@@ -58,22 +58,21 @@
                     }
 
                 }
-            }
+                .ant-tabs-content-holder{
+                    .item-grid {
 
-            .content-item {
-                .item-grid {
+                        padding: 20px 10px;
+                        display: grid;
+                        grid-gap: 1rem;
+                        // grid-template-columns: repeat(8, calc(12.5% - .875 * 0.75rem - 0rem));
+                        grid-template-columns: repeat(5,1fr);
+                        justify-items: stretch;
+                    }
 
-                    padding: 20px 10px;
-                    display: grid;
-                    grid-gap: 1rem;
-                    // grid-template-columns: repeat(8, calc(12.5% - .875 * 0.75rem - 0rem));
-                    grid-template-columns: repeat(5,1fr);
-                    justify-items: stretch;
                 }
-
-
-
             }
+
+
 
         }
     }

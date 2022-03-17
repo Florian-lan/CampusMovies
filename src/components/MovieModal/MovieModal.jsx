@@ -6,11 +6,16 @@ import ConfirmBtn from '../ConfirmBtn/ConfirmBtn';
 import { List, Avatar } from 'antd';
 
 const MovieModal = (props) => {
-    const { showState, setShowState, movieModalInfo = { title: '', imgName: '', imgSrc: '' } } = props;
+    const {
+        showState,
+        setShowState,
+        movieModalInfo = { title: '', imgName: '', imgSrc: '' },
+        wrapClassName
+    } = props;
 
 
     // console.log(movieModalInfo)
-    const { title, imgName, imgSrc, genres, plots, credits = "" } = movieModalInfo;
+    const { ID, title, imgName, imgSrc, genres, plots, credits = "" } = movieModalInfo;
     const { director = [], writers = [], stars = [] } = credits;
 
 
@@ -26,7 +31,7 @@ const MovieModal = (props) => {
     const handleClick = () => {
         console.log("I like");
         setShowState(false);
-       
+
 
         // 处理点击动画
         const clickAnimation = () => {
@@ -49,6 +54,9 @@ const MovieModal = (props) => {
             width={800}
             onCancel={handleCancel}
             footer={null}
+            wrapClassName={`${style['movieModalWrapper']} 
+            ${wrapClassName ? wrapClassName : ''
+                }`}
         >
             <div className={style["modal-body"]}>
                 <div className={style["modal-content"]}>

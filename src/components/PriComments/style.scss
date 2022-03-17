@@ -1,0 +1,56 @@
+.ant-comment {
+    .ant-comment-inner {
+        .ant-comment-avatar {
+            .ant-avatar {
+                background: var(--color-grey-plus);
+                // border: 1px solid var(--color-text-grey);
+                border: 1px solid var(--color-subject-yellow);
+            }
+
+        }
+
+        .ant-comment-content {
+            .ant-comment-content-detail {
+                .ant-form-item-control-input-content {
+                    background: #000;
+
+                    .ant-input {
+                        color: var(--color-text-white);
+                        background: transparent;
+                        border-radius: 30px;
+                        padding: 5px 20px;
+                        border-color: var(--color-text-grey);
+
+                        // border-color: transparent;
+                        &:hover {
+                            border: 1px solid var(--color-subject-yellow);
+                        }
+
+                        &:focus {
+                            border-color: var(--color-subject-yellow);
+                        }
+
+                    }
+                    .ant-btn{
+                        height: 40px;
+                        width: 100px;
+                        border:1px solid var(--color-text-grey);
+
+                        &:hover{
+                            border-color: var(--color-subject-yellow);
+                            // background-color: rgb(37, 36, 36) !important;
+                            color: var(--color-subject-yellow) !important;
+                        }
+                        >span{
+                            font-weight: 400;
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}

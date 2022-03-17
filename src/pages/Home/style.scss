@@ -6,15 +6,23 @@
     }
     .page-section{
 
-        padding: 20px 50px;
-        .page-grid{
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-
-            // justify-content: space-between;
-            
-    
+        padding: 10px 50px;
+        .section{
+            margin-top: 60px;
         }
+        .page-section1{
+            
+            .page-grid{
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+    
+                // justify-content: space-between;
+                
+        
+            }
+
+        }
+        
 
     }
     
