@@ -42,10 +42,10 @@
 
     &:hover {
         text-decoration: none;
-        border-color: var(--color-subject-yellow);
+        border-color: var(--color-subject-main);
         :global{
             .ant-tag{
-                // color: var(--color-subject-yellow);
+                // color: var(--color-subject-main);
             }
         }
 

@@ -18,7 +18,7 @@
                             >img {
                                 background: var(--color-grey-plus);
                                 // border: 1px solid var(--color-text-grey);
-                                border: 1px solid var(--color-subject-yellow);
+                                border: 1px solid var(--color-subject-main);
 
                             }
 
@@ -30,7 +30,7 @@
                             .ant-comment-content-author {
                                 .ant-comment-content-author-name {
                                     // color: var(--color-text-white);
-                                    color: var(--color-subject-yellow);
+                                    color: var(--color-subject-main);
                                 }
 
                                 .ant-comment-content-author-time {

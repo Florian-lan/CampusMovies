@@ -4,7 +4,7 @@
             .ant-avatar {
                 background: var(--color-grey-plus);
                 // border: 1px solid var(--color-text-grey);
-                border: 1px solid var(--color-subject-yellow);
+                border: 1px solid var(--color-subject-main);
             }
 
         }
@@ -23,11 +23,11 @@
 
                         // border-color: transparent;
                         &:hover {
-                            border: 1px solid var(--color-subject-yellow);
+                            border: 1px solid var(--color-subject-main);
                         }
 
                         &:focus {
-                            border-color: var(--color-subject-yellow);
+                            border-color: var(--color-subject-main);
                         }
 
                     }
@@ -37,9 +37,9 @@
                         border:1px solid var(--color-text-grey);
 
                         &:hover{
-                            border-color: var(--color-subject-yellow);
+                            border-color: var(--color-subject-main);
                             // background-color: rgb(37, 36, 36) !important;
-                            color: var(--color-subject-yellow) !important;
+                            color: var(--color-subject-main) !important;
                         }
                         >span{
                             font-weight: 400;

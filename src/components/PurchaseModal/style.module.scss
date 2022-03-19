@@ -1,0 +1,21 @@
+.purchase-modal-wrapper{
+    :global{
+        .ant-modal{
+            width: 300px !important;
+            top: 250px;
+
+
+        .ant-modal-content{
+            border: 1px solid var(--color-subject-blue);
+            border-radius: 20px;
+        }
+        .ant-modal-close-x{
+            &:hover{
+
+                color: var(--color-subject-blue);
+            }
+            
+        }
+    }
+    }
+}

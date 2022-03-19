@@ -57,13 +57,14 @@ const MovieStore = () => {
                                                     movieInfo={val}
                                                     setMovieModalShow={setMovieModalShow}
                                                     setMovieModalInfo={setMovieModalInfo}
+                                                    
                                                 />
                                             )
 
                                         })
                                     }
                                 </div>
-                                <MovieModal showState={movieModalShow} setShowState={setMovieModalShow} movieModalInfo={movieModalInfo}/>
+                                <MovieModal showState={movieModalShow} setShowState={setMovieModalShow} movieModalInfo={movieModalInfo} wrapClassName="standardModal"/>
                                 </>
                                 
 

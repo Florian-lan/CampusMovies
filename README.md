@@ -50,3 +50,16 @@ npm install --save axios
 1.[CSS清除浮动原理理解](https://juejin.cn/post/6844903504545316877)
 2. [grid布局的使](https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
 3. 按钮优化
+
+
+### 影厅
+1. 沙河校区
+   1. 夏新厅
+   2. 欣苑学生公寓电影厅
+   3. 一教
+2. 清水河校区
+   1. 上三角厅
+   2. 下三角厅
+   3. 宾诺咖啡馆
+
+初步计划，维护三个数据库，分别是影片信息，活动信息，影厅信息，（维护影片和活动的时间）

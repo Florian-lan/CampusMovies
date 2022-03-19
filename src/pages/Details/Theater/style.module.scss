@@ -1,0 +1,49 @@
+.theater {
+    border: 1px solid var(--color-grey-plus);
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin: 30px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:hover{
+        border: 1px solid var(--color-text-white);
+    }
+
+    .theater-details {
+        text-align: left;
+        padding: 0 20px;
+        cursor: pointer;
+
+        .theater-details-header {
+            // color: var(--color-subject-main);
+            color: var(--color-subject-blue);
+            font-size: 25px;
+            margin: 10px 10px;
+            /* color: white; */
+
+        }
+
+        .theater-details-auxiliary {
+            color: var(--color-text-minor);
+
+        }
+    }
+
+    .time-list {
+        display: inline-flex;
+        flex-direction: column;
+        list-style: none;
+        color: var(--color-subject-blue);
+        text-align: left;
+        margin: 10px 0;
+        padding-left: 40px;
+
+        .time-list-items {
+            margin: 20px 0;
+
+        }
+    }
+
+}

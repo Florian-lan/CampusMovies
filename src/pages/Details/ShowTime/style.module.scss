@@ -1,0 +1,19 @@
+.theater-showtime {
+    .showtime-day {
+        color: var(--color-subject-blue);
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .showtime-hour {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+
+        .showtime-hour-item {
+            margin: 10px;
+        }
+
+    }
+}

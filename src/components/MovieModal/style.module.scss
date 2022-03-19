@@ -5,15 +5,15 @@
     :global {
         .ant-modal {
             .ant-modal-content {
-               
+
                 border-radius: 20px;
-                border: 2px solid var(--color-subject-yellow);
-               
-
-               
+                border: 2px solid var(--color-subject-main);
 
 
-               
+
+
+
+
 
             }
         }
@@ -21,12 +21,15 @@
     }
 
 }
-:global{
-    .standardModal{
-        .ant-modal{
-            .ant-modal-content{
+
+// 外部所有添加standardModal的共享这些属性
+:global {
+    .standardModal {
+        .ant-modal {
+            .ant-modal-content {
                 color: var(--color-text-white);
                 background-color: var(--color-black-minus);
+
                 .ant-modal-close {
 
                     color: var(--color-text-white);
@@ -40,17 +43,18 @@
                     }
 
                     &:hover {
-                        color: var(--color-subject-yellow);
+                        color: var(--color-subject-main);
                     }
                 }
+
                 .ant-modal-body {
                     padding: 40px 15px 15px 15px;
 
 
 
                 }
-                
-                
+
+
             }
         }
     }
@@ -87,7 +91,7 @@
 
                 .poster-title {
                     // color:var(--color-text-white);
-                    color: var(--color-subject-yellow);
+                    color: var(--color-subject-main);
                 }
             }
 
@@ -156,7 +160,7 @@
                             text-decoration: none;
                             display: inline-flex;
                             // color:var(--color-text-red);
-                            color: var(--color-subject-yellow);
+                            color: var(--color-subject-main);
 
                             .item-content-list-item {
                                 vertical-align: middle;
@@ -190,8 +194,8 @@
             border: 1px solid var(--color-grey-plus);
 
             &:hover {
-                border: 1px solid var(--color-subject-yellow) !important;
-                color: var(--color-subject-yellow) !important;
+                border: 1px solid var(--color-subject-main) !important;
+                color: var(--color-subject-main) !important;
             }
         }
 

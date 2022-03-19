@@ -34,7 +34,7 @@
                                 .ant-tabs-tab-btn {}
 
                                 &:hover {
-                                    color: var(--color-subject-yellow);
+                                    color: var(--color-subject-main);
                                     // background-color: var(--color-grey-plus);
                                 }
 
@@ -43,7 +43,7 @@
 
                             .ant-tabs-tab-active {
                                 .ant-tabs-tab-btn {
-                                    color: var(--color-subject-yellow);
+                                    color: var(--color-subject-main);
                                 }
 
 
@@ -51,21 +51,22 @@
                             }
 
                             .ant-tabs-ink-bar {
-                                background: var(--color-subject-yellow);
+                                background: var(--color-subject-main);
                             }
                         }
 
                     }
 
                 }
-                .ant-tabs-content-holder{
+
+                .ant-tabs-content-holder {
                     .item-grid {
 
                         padding: 20px 10px;
                         display: grid;
                         grid-gap: 1rem;
                         // grid-template-columns: repeat(8, calc(12.5% - .875 * 0.75rem - 0rem));
-                        grid-template-columns: repeat(5,1fr);
+                        grid-template-columns: repeat(5, 1fr);
                         justify-items: stretch;
                     }
 
