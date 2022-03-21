@@ -4,7 +4,7 @@ import PriComments from '../../components/PriComments/PriComments'
 import RateModal from '../../components/RateModal/RateModal'
 import CardTitle from '../../components/CardTittle/CardTitle'
 import PurchaseModal from '../../components/PurchaseModal/PurchaseModal'
-import Theater from './Theater/Therter'
+import Theater from './Theater/Theater'
 import './style.scss'
 import { useParams } from 'react-router-dom';
 import { find } from "lodash"
@@ -172,7 +172,9 @@ const Details = () => {
                                 key={index}
                                 showTimeTheater={value}
                                 showTimeTheaterInfo={showTimeTheaterInfo[index]}
-
+                                // movieInfoItem={movieInfoItem}
+                                // title={title}
+                                movieInfoItem={movieInfoItem}
                             />
                         )
                     })

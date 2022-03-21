@@ -10,7 +10,10 @@ const PurchaseModal = (
 
         purchaseModalShow,
         setPurchaseModalShow,
-        wrapClassName
+        wrapClassName,
+        showTimeTheater,
+        showTime,
+        title
     }
 
 ) => {
@@ -22,7 +25,9 @@ const PurchaseModal = (
     const handleCancel = () => {
         setPurchaseModalShow(false);
     }
+    console.log(showTime)
     return (
+
         <Modal
             visible={purchaseModalShow}
             width={800}
@@ -30,10 +35,9 @@ const PurchaseModal = (
             footer={null}
             wrapClassName={`${style["purchase-modal-wrapper"]} ${wrapClassName ? wrapClassName : " "}`}
         >
-
-
-
-            test
+        <div className="purchase-modal-content">
+            
+        </div>
         </Modal>
 
     )

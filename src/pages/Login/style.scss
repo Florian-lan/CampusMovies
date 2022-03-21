@@ -1,0 +1,135 @@
+a {
+    list-style: none;
+
+}
+
+.login-content-wrapper {
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+    .img-wrapper{
+        >img{
+            width: 500px;
+        }
+    }
+
+    .login-wrapper {
+        width: 300px;
+        border: 1px solid var(--color-grey-plus);
+        border-radius: 40px;
+        padding: 30px;
+
+        &:hover {
+            border-color: var(--color-subject-main);
+        }
+
+        &:focus {
+            border-color: var(--color-subject-main);
+        }
+
+        .ant-form {
+            .ant-form-item {
+                .ant-form-item-control {
+                    .ant-form-item-control-input {
+                        .ant-form-item-control-input-content {
+                            .ant-input-affix-wrapper {
+                                background-color: var(--color-black-minus);
+                                border: 1px solid var(--color-text-minor);
+                                border-radius: 15px;
+
+                                &:hover {
+                                    border-color: var(--color-subject-main) !important;
+                                }
+
+                                .ant-input-prefix {
+                                    color: var(--color-text-white);
+
+                                }
+
+                                .ant-input {
+                                    background-color: var(--color-black-minus);
+                                    color: var(--color-text-white);
+                                }
+                            }
+
+                            .ant-checkbox-wrapper {
+                                color: var(--color-text-grey);
+
+                                .ant-checkbox {
+                                    .ant-checkbox-inner {
+                                        background: var(--color-black-minus);
+                                        border: 1px solid var(--color-grey-plus);
+                                        border-radius: 3px;
+
+                                        &::after {
+                                            border: 2px solid var(--color-text-minor);
+                                            border-top: 0;
+                                            border-left: 0;
+                                        }
+                                    }
+                                }
+
+                                &:hover {
+                                    .ant-checkbox {
+                                        .ant-checkbox-inner {
+                                            border-color: var(--color-text-minor);
+
+                                        }
+
+                                    }
+                                }
+
+                                .ant-checkbox-checked {
+                                    &::after {
+                                        border-color: var(--color-text-minor);
+                                    }
+                                }
+
+                            }
+                            .login-form-button {
+                                width: 200px;
+                                height: 40px;
+                                font-size: 15px;
+                                font-weight: 500;
+                                margin: 0 20px;
+                                border: 1px solid var(--color-text-minor);
+
+                                &:hover {
+                                    border-color: var(--color-subject-main);
+                                }
+                            }
+                            .register{
+                                margin-top: 5px;
+                                text-align: left;
+                                padding-left: 40px;
+                                .register-or{
+                                    margin-right: 5px;
+                                    color: var(--color-text-grey);
+
+                                }
+                                .register-link{
+
+                                }
+                            }
+
+                            .login-form-forgot {
+                                list-style: none;
+
+
+                            }
+                        }
+                    }
+
+                    .ant-form-item-explain {
+                        margin: 5px 0 10px 0;
+                        text-align: left;
+                        padding-left: 20px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .register-wrapper {}
+}

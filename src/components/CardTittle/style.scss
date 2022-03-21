@@ -29,7 +29,7 @@
                 content: '';
 
 
-                background: #F5C518;
+                background: var(--color-subject-main);
                 position: absolute;
                 margin-left: -15px;
             }
@@ -45,11 +45,11 @@
 
         &:hover {
             .title-text {
-                color: #F5C518;
+                color: var(--color-subject-main);
             }
 
             // .title-text .anticon svg{
-            //     color:#F5C518;
+            //     color:var(--color-subject-main);
             // } 
         }
 
