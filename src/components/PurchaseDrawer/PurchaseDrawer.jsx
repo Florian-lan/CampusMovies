@@ -3,6 +3,8 @@ import style from './style.module.scss'
 import { Drawer } from 'antd'
 import ConfirmBtn from '../ConfirmBtn/ConfirmBtn'
 import { ShoppingOutlined } from '@ant-design/icons'
+import { useDispatch, useSelector } from 'react-redux'
+import { addPurchasedInfo } from '../../redux/movieReducers/action'
 
 const PurchaseDrawer = ({
     purchaseDrawerShow,
@@ -10,6 +12,7 @@ const PurchaseDrawer = ({
     wrapClassName,
     showTimeTheater,
     showTime,
+    showDay,
     // title
     movieInfoItem
 
@@ -18,7 +21,24 @@ const PurchaseDrawer = ({
     const all = 100;
     const count = 98;
     const price = 6;
-    const { imgName = "", imgSrc = "", title = "" } = movieInfoItem
+    // console.log(typeof showTime)
+
+    let purchasedItem= {
+        movie: movieInfoItem,
+        day:showDay,
+        time: showTime,
+        theater: showTimeTheater
+    }
+    const { imgName = "", imgSrc = "", title = "" } = movieInfoItem;
+    
+    const purchasedInfoList = useSelector(state=>{
+        return state.PurchasedInfo.purchasedInfoList;
+    })
+    const dispatch = useDispatch();
+    // console.log(purchasedItem.movie.ID)
+    console.log(purchasedInfoList)
+    console.log(purchasedItem)
+
 
     const onClose = () => {
         setPurchaseDrawerShow(false);
@@ -27,10 +47,12 @@ const PurchaseDrawer = ({
         setPurchaseDrawerShow(false);
 
     }
+
     const handleConfirm = () => {
         setPurchaseDrawerShow(false);
-        count--;
-        console.log(count);
+        // count--;
+        // console.log(count);
+        dispatch(addPurchasedInfo(purchasedItem));
     }
 
     return (

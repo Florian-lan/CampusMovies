@@ -7,17 +7,23 @@ a {
     padding: 80px 40px;
     display: flex;
     justify-content: center;
-    .img-wrapper{
-        >img{
+
+    .img-wrapper {
+        >img {
             width: 500px;
         }
     }
 
     .login-wrapper {
+        display: flex;
+        flex-direction: column;
+       
+        
         width: 300px;
         border: 1px solid var(--color-grey-plus);
         border-radius: 40px;
         padding: 30px;
+        padding-bottom: 0px;
 
         &:hover {
             border-color: var(--color-subject-main);
@@ -26,6 +32,21 @@ a {
         &:focus {
             border-color: var(--color-subject-main);
         }
+
+
+        .login-header {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+
+            .login-header-text {
+                background-image: linear-gradient(to right, var(--color-subject-minus), var(--color-subject-blue));
+                // background-image: linear-gradient(to bottom, var(--color-text-white), var(--color-grey-plus));
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+        }
+
 
         .ant-form {
             .ant-form-item {
@@ -45,6 +66,14 @@ a {
                                     color: var(--color-text-white);
 
                                 }
+                                .ant-input-suffix{
+                                    .ant-input-password-icon{
+                                        color: var(--color-text-grey);
+                                        &:hover{
+                                            color: var(--color-text-white);
+                                        }
+                                    }
+                                }
 
                                 .ant-input {
                                     background-color: var(--color-black-minus);
@@ -54,6 +83,7 @@ a {
 
                             .ant-checkbox-wrapper {
                                 color: var(--color-text-grey);
+                                padding-right: 70px;
 
                                 .ant-checkbox {
                                     .ant-checkbox-inner {
@@ -86,6 +116,7 @@ a {
                                 }
 
                             }
+
                             .login-form-button {
                                 width: 200px;
                                 height: 40px;
@@ -98,18 +129,19 @@ a {
                                     border-color: var(--color-subject-main);
                                 }
                             }
-                            .register{
+
+                            .register {
                                 margin-top: 5px;
-                                text-align: left;
-                                padding-left: 40px;
-                                .register-or{
+                                text-align: right;
+                                padding-right: 40px;
+
+                                .register-or {
                                     margin-right: 5px;
                                     color: var(--color-text-grey);
 
                                 }
-                                .register-link{
 
-                                }
+                                .register-link {}
                             }
 
                             .login-form-forgot {
@@ -126,8 +158,12 @@ a {
                         padding-left: 20px;
                     }
                 }
+                &:nth-last-child(2){
+                    margin-bottom: 10px;
+                }
 
             }
+           
         }
     }
 

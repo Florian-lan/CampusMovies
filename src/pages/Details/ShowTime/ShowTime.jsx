@@ -20,8 +20,6 @@ const ShowTime = (
     const [showTime, setShowTime] = useState("");
 
     const handleClick = (time) => {
-
-
         // console.log(e.target)
         // console.log(e.currentTarget.innerHTML)
         // setPurchaseModalShow(true);
@@ -80,6 +78,7 @@ const ShowTime = (
                 wrapClassName="standardDrawer"
                 showTimeTheater={showTimeTheater}
                 showTime={showTime}
+                showDay = {day}
                 // title={title}
                 movieInfoItem={movieInfoItem}
             />

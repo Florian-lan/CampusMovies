@@ -18,7 +18,11 @@
                     &:hover {
                         // border: 1px solid #f0f0f0;
                         border: 1px solid var(--color-subject-main);
+                        box-shadow: 3px 3px 6px -4px rgba(255, 255, 255, 0.16),
+                        6px 6px 16px 0 rgba(255, 255, 255, 0.12),
+                        9px 9px 28px 8px rgba(255, 255, 255, 0.08);
                     }
+                   
     
     
     
@@ -118,6 +122,11 @@
                                 color: #757576;
     
                             }
+                            .anticon.heart-filled{
+                                >svg{
+                                    color: #c92230;
+                                }
+                            }
     
                             &:hover {
                                 .anticon svg {
@@ -125,6 +134,11 @@
                                     height: 25px;
                                     color: #d4d4d5;
     
+                                }
+                                .anticon.heart-filled svg{
+                                    width: 25px;
+                                    height: 25px;
+                                    color: #c92230; 
                                 }
                             }
                             

@@ -10,6 +10,7 @@ const ConfirmBtn = (
         onClick,
         type,
         htmlType,
+        // style,
         ...props
     }
 ) => {
@@ -21,6 +22,7 @@ const ConfirmBtn = (
             type={type ? type : "default"}
             htmlType={htmlType ? htmlType : "button"}
             id={1111}
+
         >
             {text}
             {props.children}

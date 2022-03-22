@@ -1,0 +1,236 @@
+.register-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 80px 40px;
+
+    .img-wrapper {
+        padding-top: 50px;
+        >img {
+            width: 700px;
+        }
+    }
+
+    .register-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        border: 1px solid var(--color-grey-plus);
+        border-radius: 40px;
+        padding: 30px;
+
+        &:hover {
+            border-color: var(--color-subject-main);
+        }
+
+        &:focus {
+            border-color: var(--color-subject-main);
+        }
+
+        .register-header {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+
+            .register-header-text {
+                background-image: linear-gradient(to right, var(--color-subject-minus), var(--color-subject-blue));
+                // background-image: linear-gradient(to bottom, var(--color-text-white), var(--color-grey-plus));
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+        }
+        .ant-form-item{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            .ant-form-item-label{
+                text-align: left;
+                >label{
+                    color: var(--color-text-minor);
+                    margin-bottom: 0; 
+                }
+                >label:not(.ant-form-item-required){
+                    margin-left: 10px;
+                }
+
+                // .ant-form-item-required{
+                //     color: var(--color-text-minor);
+                //     margin-bottom: 0;
+                // }
+            }
+            .ant-form-item-control {
+                .ant-form-item-control-input {
+                    .ant-form-item-control-input-content {
+                        .ant-select {
+                            .ant-select-selector {
+                                background-color: var(--color-black-minus);
+                                border: 1px solid var(--color-text-minor);
+                                border-radius: 15px;
+                                background-color: var(--color-black-minus);
+                                color: var(--color-text-white);
+    
+                                &:hover {
+                                    border-color: var(--color-subject-main) !important;
+                                }
+    
+                            }
+    
+                            .ant-select-arrow {
+                                color: var(--color-text-grey);
+    
+                                &:hover {
+                                    color: var(--color-text-white);
+                                }
+    
+                            }
+    
+                            .ant-select-clear {
+                                color: var(--color-text-grey);
+                                background: var(--color-black);
+                                top: 40%;
+    
+                                &:hover {
+                                    color: var(--color-text-white);
+                                }
+                            }
+                        }
+    
+                        .ant-input-affix-wrapper {
+                            background-color: var(--color-black-minus);
+                            border: 1px solid var(--color-text-minor);
+                            border-radius: 15px;
+    
+                            &:hover {
+                                border-color: var(--color-subject-main) !important;
+                            }
+    
+                            .ant-input-prefix {
+                                color: var(--color-text-white);
+    
+                            }
+    
+                            .ant-input-suffix {
+                                .ant-input-password-icon {
+                                    color: var(--color-text-grey);
+    
+                                    &:hover {
+                                        color: var(--color-text-white);
+                                    }
+                                }
+                            }
+    
+                            .ant-input {
+                                background-color: var(--color-black-minus);
+                                color: var(--color-text-white);
+                            }
+                        }
+    
+                        .ant-checkbox-wrapper {
+                            color: var(--color-text-grey);
+    
+                            .ant-checkbox {
+                                .ant-checkbox-inner {
+                                    background: var(--color-black-minus);
+                                    border: 1px solid var(--color-grey-plus);
+                                    border-radius: 3px;
+    
+                                    &::after {
+                                        border: 2px solid var(--color-text-minor);
+                                        border-top: 0;
+                                        border-left: 0;
+                                    }
+                                }
+                            }
+    
+                            &:hover {
+                                .ant-checkbox {
+                                    .ant-checkbox-inner {
+                                        border-color: var(--color-text-minor);
+    
+                                    }
+    
+                                }
+                            }
+    
+                            .ant-checkbox-checked {
+                                &::after {
+                                    border-color: var(--color-text-minor);
+                                }
+                            }
+    
+                        }
+    
+                        .register-form-button {
+                            width: 200px;
+                            height: 40px;
+                            font-size: 15px;
+                            font-weight: 500;
+                            // margin: 0 20px;
+                            margin-top: 20px;
+                            border: 1px solid var(--color-text-minor);
+    
+                            &:hover {
+                                border-color: var(--color-subject-main);
+                            }
+                        }
+                        .login {
+                            margin-top: 5px;
+                            text-align: right;
+                            padding-right: 40px;
+    
+                            .login-or {
+                                margin-right: 5px;
+                                color: var(--color-text-grey);
+    
+                            }
+    
+                            .login-link {}
+                        }
+    
+    
+    
+    
+                       
+                    }
+                }
+    
+                .ant-form-item-explain {
+                    margin: 5px 0 10px 0;
+                    text-align: left;
+                    padding-left: 20px;
+                }
+            }
+
+        }
+        
+
+    }
+}
+
+
+.ant-select-dropdown.ant-cascader-dropdown {
+    color: var(--color-text-minor);
+    background: var(--color-black);
+    border-radius: 10px;
+    border: 1px solid var(--color-grey-plus);
+    box-shadow: 0 3px 6px -4px rgba(255, 255, 255, 0.12),
+        0 6px 16px 0 rgba(255, 255, 255, 0.08),
+        0 9px 28px 8px rgba(255, 255, 255, 0.05);
+
+    .ant-cascader-menu {
+        border-right: 1px solid var(--color-text-grey);
+
+        .ant-cascader-menu-item {
+            color: var(--color-text-minor);
+            // border-bottom: 1px solid var(--color-grey-plus);
+        }
+
+        .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled) {
+            background-color: var(--color-white);
+        }
+    }
+}
+
+.ant-select-dropdown-hidden {
+    // display: block !important;
+}

@@ -25,14 +25,16 @@ const Details = () => {
     // 获取id
     const { id } = useParams();
     const movieInfoList = useSelector((state) => {
+        // console.log(state.MovieInfo)
         return state.MovieInfo;
     }).movies;
 
+    console.log(movieInfoList)
     // 引用lodash中的函数，获取指定电影信息
     const movieInfoItem = find(movieInfoList, { "ID": id });
     console.log(movieInfoItem);
 
-
+    
 
     const { auxiliary = {}, credits = {}, genres = [], plots = "", imgSrc = "", title, showTime = {} } = movieInfoItem;
     // console.log(credits.director[0]);

@@ -20,7 +20,7 @@ const MovieModal = (props) => {
 
 
     // console.log(credits);
-    console.log(writers);
+    // console.log(writers);
 
     const handleCancel = () => {
         console.log('cancel');

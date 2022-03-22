@@ -14,6 +14,9 @@ const store = createStore(
     {
         MovieInfo:initialMovieInfo,
         DetailsId:0,
+        CollectionInfo:[],
+        // LikeStatus:false,
+        PurchasedInfo:[]
     
     }
 )

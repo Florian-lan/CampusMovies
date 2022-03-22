@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './style.scss';
 
 import MovieBox from "../../components/MovieBox/MovieBox";
 import CardTitle from "../../components/CardTittle/CardTitle";
 import MovieModal from "../../components/MovieModal/MovieModal";
 import PrimaryTag from "../../components/PrimaryTag/PrimaryTag";
+import LikeStore from "./LikeStore/LikeStore";
 import { useSelector } from "react-redux";
 import { Tabs } from 'antd';
-
-
-
 
 
 
@@ -24,10 +22,10 @@ const MovieStore = () => {
         // console.log(state.MovieInfo.movies);
         return state.MovieInfo.movies;
     });
-
-
+    
     const callback = (key) => {
         console.log(key);
+        // console.log(collectionInfoList)
     }
 
     return (
@@ -41,32 +39,29 @@ const MovieStore = () => {
 
                 <section className="store-content">
 
-                    <Tabs defaultActiveKey="1" onChange={callback}>
+                    <Tabs destroyInactiveTabPane defaultActiveKey="1" onChange={callback}>
                         <TabPane tab="所有电影" key="1">
                             {
                                 <>
-                                <div className="item-grid">
+                                    <div className="item-grid">
+                                        {
+                                            movieInfoList?.map((val, index) => {
+                                                {/* console.log(setMovieModalShow) */ }
+                                                return (
+                                                    <MovieBox
+                                                        key={index}
+                                                        movieInfo={val}
+                                                        setMovieModalShow={setMovieModalShow}
+                                                        setMovieModalInfo={setMovieModalInfo}
 
-                                    {
-
-                                        movieInfoList?.map((val, index) => {
-                                            {/* console.log(setMovieModalShow) */ }
-                                            return (
-                                                <MovieBox
-                                                    key={index}
-                                                    movieInfo={val}
-                                                    setMovieModalShow={setMovieModalShow}
-                                                    setMovieModalInfo={setMovieModalInfo}
-                                                    
-                                                />
-                                            )
-
-                                        })
-                                    }
-                                </div>
-                                <MovieModal showState={movieModalShow} setShowState={setMovieModalShow} movieModalInfo={movieModalInfo} wrapClassName="standardModal"/>
+                                                    />
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                    <MovieModal showState={movieModalShow} setShowState={setMovieModalShow} movieModalInfo={movieModalInfo} wrapClassName="standardModal" />
                                 </>
-                                
+
 
                             }
                         </TabPane>
@@ -76,7 +71,16 @@ const MovieStore = () => {
                             }
                         </TabPane>
                         <TabPane tab="我喜欢的" key="3">
-                            Content of Tab Pane 3
+                            {
+                                <>
+                                    <div className="item-grid">
+                                    <LikeStore/>
+                                        
+                                    </div>
+                                </>
+
+
+                            }
                         </TabPane>
                     </Tabs>
 

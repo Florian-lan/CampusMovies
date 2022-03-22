@@ -4,6 +4,7 @@ import { Input } from 'antd';
 import SearchBox from "./searchBox/searchBox";
 import { SearchOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
+import { useLocation } from "react-router-dom";
 
 
 const { Search } = Input;
@@ -12,12 +13,14 @@ const { SubMenu } = Menu;
 
 const Header = () => {
     
-    const [val, setVal] = useState(false)
+    const [val, setVal] = useState("show")
+    const location = useLocation()
 
     const handleClick = (e) =>{
       
             console.log('click ', e);
-            setVal(e.target.val)
+            setVal(e.key)
+
 
     }
 
@@ -45,22 +48,23 @@ const Header = () => {
 
 
 
+                     
                         {/* func-zone */}
                         <div className="funczone">
-                            <Menu onClick={handleClick} selectedKeys={[val]} mode="horizontal">
+                            <Menu onClick={handleClick}  selectedKeys={[location.pathname]} mode="horizontal">
 
-                                <Menu.Item key="show">
+                                <Menu.Item key="/home">
                                     <a href="/" target="_blank" rel="noopener noreferrer">
                                         主页
                                     </a>
                                 </Menu.Item>
-                                <Menu.Item key="theaters">
+                                <Menu.Item key="/store">
                                     <a href="/store" target="_blank" rel="noopener noreferrer">
                                         影库
                                     </a>
                                 </Menu.Item>
-                                <Menu.Item key="news">
-                                    <a href="/" target="_blank" rel="noopener noreferrer">
+                                <Menu.Item key="/personal">
+                                    <a href="/personal" target="_blank" rel="noopener noreferrer">
                                         我的
                                     </a>
                                 </Menu.Item>

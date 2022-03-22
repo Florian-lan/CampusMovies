@@ -1,4 +1,5 @@
-import React, {useCallback, useEffect} from "react";
+import React, { useCallback, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
 import AppRouter from './router/AppRouter';
 import Header from './pages/Header/Header';
 import Footer from './pages/Footer/Footer'
@@ -7,6 +8,8 @@ import MovieInfo from './Data/MovieInfo/MovieInfo.json';
 
 import {
     setMovieInfo,
+    setCollectionInfo,
+    setPurchasedInfo
 } from './redux/movieReducers/action';
 
 import { useDispatch } from "react-redux";
@@ -18,36 +21,50 @@ import { useParams } from "react-router-dom";
 
 const App = (props) => {
     const dispatch = useDispatch();
+    const initialCollectionInfo = [];
+    const initialPurchasedInfo = [];
     useEffect(() => {
         // 清除缓存数据，测试阶段需要，后续可以删去
         localStorage.clear();
-        
-        
-        
-        // 获取/加载测试数据
-        if(!localStorage.getItem('movieInfo')){
-            localStorage.setItem('movieInfo',JSON.stringify(MovieInfo));
-        }
 
-        // 取出测试数据
+        // 基本信息初始化
+        if (!localStorage.getItem('movieInfo')) {
+            localStorage.setItem('movieInfo', JSON.stringify(MovieInfo));
+        }
         const movieInfoList = JSON.parse(
             localStorage.getItem('movieInfo')
         );
-        // console.log(movieInfoList);
-        console.log(movieInfoList);
-
+        // 是一个对象
+        console.log(movieInfoList.movies);  
         dispatch(setMovieInfo(movieInfoList));
 
-        // return () => {
-        // };
+        // collection信息初始化
+        if (!localStorage.getItem('collectionInfo')) {
+            localStorage.setItem('collectionInfo', JSON.stringify(initialCollectionInfo));
+        }
+        const collectionInfo = JSON.parse(localStorage.getItem('collectionInfo'));
+        // 更新redux
+        dispatch(setCollectionInfo(collectionInfo));
+
+        // purchased 信息初始化
+        if(!localStorage.getItem('purchasedInfo')){
+            localStorage.setItem('purchasedInfo',JSON.stringify(initialPurchasedInfo));
+        }
+        const purchasedInfo = JSON.parse(localStorage.getItem('purchasedInfo'));
+        dispatch(setPurchasedInfo(purchasedInfo));
+
     }, []);
 
 
     return (
         <div className="App">
-            <Header />
-            <AppRouter />
-            <Footer/>
+            <BrowserRouter>
+                <Header />
+                <AppRouter />
+                <Footer />
+
+            </BrowserRouter>
+
 
         </div>
 

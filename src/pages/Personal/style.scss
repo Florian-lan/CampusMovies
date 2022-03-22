@@ -1,0 +1,27 @@
+.personal-wrapper{
+    margin: 0 80px;
+    position: relative;
+
+    .personal-body {
+        padding-top: 20px;
+
+        .body-title {
+            border-bottom: 1px solid var(--color-grey-plus);
+            padding: 10px 40px;
+
+            .title-text {
+                text-align: left;
+                color: var(--color-white);
+            }
+
+        }
+
+        .body-content{
+            padding: 30px 30px;
+            .content-section{
+                margin: 10px 0 30px 0;
+            }
+        }
+
+}
+}
