@@ -13,6 +13,18 @@
 
         .showtime-hour-item {
             margin: 10px;
+            :global{
+                .timeCfm{
+                    color: var(--color-subject-third) !important;
+                    border-color: var(--color-subject-third) !important;
+                    &::before{
+                        display: block;
+                        content: "";
+                        background: var(--color-subject-third);
+                        opacity: 0.2;
+                    }
+                }
+            }
         }
 
     }

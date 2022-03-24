@@ -4,11 +4,18 @@ import { Drawer } from 'antd'
 import ConfirmBtn from '../ConfirmBtn/ConfirmBtn'
 import { ShoppingOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
-import { addPurchasedInfo } from '../../redux/movieReducers/action'
+import { addPurchasedInfo, removePurchasedInfo } from '../../redux/movieReducers/action'
+import { find } from 'lodash'
 
 const PurchaseDrawer = ({
     purchaseDrawerShow,
     setPurchaseDrawerShow,
+    // 判断是否预定某个具体时间
+    isPurchasedTime,
+    setIsPurchasedTime,
+    // 判断是否预定这部电影
+    isPurchased,
+    setIsPurchased,
     wrapClassName,
     showTimeTheater,
     showTime,
@@ -23,21 +30,25 @@ const PurchaseDrawer = ({
     const price = 6;
     // console.log(typeof showTime)
 
-    let purchasedItem= {
+    let purchasedItem = {
         movie: movieInfoItem,
-        day:showDay,
+        day: showDay,
         time: showTime,
         theater: showTimeTheater
     }
     const { imgName = "", imgSrc = "", title = "" } = movieInfoItem;
-    
-    const purchasedInfoList = useSelector(state=>{
+
+    const purchasedInfoList = useSelector(state => {
         return state.PurchasedInfo.purchasedInfoList;
     })
+
+    // find(purchasedInfoList,function(temp){return })
+   
     const dispatch = useDispatch();
     // console.log(purchasedItem.movie.ID)
     console.log(purchasedInfoList)
     console.log(purchasedItem)
+    // console.log(isPurchasedTime)
 
 
     const onClose = () => {
@@ -48,11 +59,21 @@ const PurchaseDrawer = ({
 
     }
 
-    const handleConfirm = () => {
+    const handleSubscribe = () => {
         setPurchaseDrawerShow(false);
+        setIsPurchasedTime(true);
         // count--;
         // console.log(count);
         dispatch(addPurchasedInfo(purchasedItem));
+        if(isPurchased){
+            console.log("你只能买一张票，而您已经买过了")
+        }
+    }
+    const handleCancelSubscribe = ()=>{
+        setPurchaseDrawerShow(false);
+        setIsPurchasedTime(false);
+        dispatch(removePurchasedInfo(purchasedItem));
+
     }
 
     return (
@@ -134,12 +155,22 @@ const PurchaseDrawer = ({
                     </ul>
                     <div className={style["content-func"]}>
                         <div className={style["func-confirm"]}>
-                            <ConfirmBtn
-                                text="预定"
-                                loading={false}
-                                className="confirm-btn"
-                                onClick={handleConfirm}
-                            />
+                            {
+                                isPurchasedTime
+                                    ? <ConfirmBtn
+                                        text="取消预定"
+                                        loading={false}
+                                        className="confirm-btn"
+                                        onClick={handleCancelSubscribe}
+                                    />
+                                    : <ConfirmBtn
+                                        text="预定"
+                                        loading={false}
+                                        className="confirm-btn"
+                                        onClick={handleSubscribe}
+                                    />
+                            }
+
                         </div>
                         <div className={style["func-cancel"]}>
                             <ConfirmBtn

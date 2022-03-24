@@ -2,8 +2,16 @@ import React, { useState } from 'react'
 import './style.scss'
 import CardTitle from '../../components/CardTittle/CardTitle'
 import PurchasedBox from '../../components/PurchasedBox/PurchasedBox'
+import { useSelector } from 'react-redux'
 
 const Personal = () => {
+    const purchasedInfoList = useSelector(state => {
+        return state.PurchasedInfo.purchasedInfoList;
+    });
+
+
+    console.log(purchasedInfoList);
+
     return (
         <div className="personal-wrapper">
             <div className="personal-body">
@@ -22,9 +30,19 @@ const Personal = () => {
                             description="您已预定的电影或讲座等活动"
                         />
                         <div className="content-purchased">
-                            <PurchasedBox>
+                            {
+                                purchasedInfoList?.map((value, index) => {
+                                    console.log(value);
+                                    return (
+                                        <PurchasedBox
+                                            key={index}
+                                            purchasedInfoItem={value}>
 
-                            </PurchasedBox>
+                                        </PurchasedBox>
+                                    )
+                                })
+                            }
+
                         </div>
                     </div>
                     <div className="content-section">

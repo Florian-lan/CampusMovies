@@ -1,15 +1,125 @@
-.purchased-wrapper{
+.purchased-wrapper {
     border: 1px solid var(--color-grey-plus);
     padding: 10px 20px;
-    border-radius: 15px;
-    &:hover{
+    border-radius: 50px;
+
+    &:hover {
         border-color: var(--color-subject-minus);
-        box-shadow:  3px 3px 6px -4px rgba(245, 197, 24, 0.16),
-        6px 6px 16px 0 rgba(245, 197, 24, 0.12),
-        9px 9px 28px 8px rgba(245, 197, 24, 0.08);;
+        box-shadow: 3px 3px 6px -4px rgba(245, 197, 24, 0.16),
+            6px 6px 16px 0 rgba(245, 197, 24, 0.12),
+            9px 9px 28px 8px rgba(245, 197, 24, 0.08);
+        ;
     }
-    .purchased-content{
-        
+
+    .purchased-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10px;
+
+        .content-info {
+            display: flex;
+
+            .content-info-img {
+                margin-right: 20px;
+
+                >img {
+                    width: 100px;
+                }
+            }
+
+            .content-info-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 10px 0 20px 0;
+
+                .info-text-header {
+                    color: var(--color-text-white);
+                    text-align: left;
+
+                }
+
+                .info-text-more {
+                    color: var(--color-text-minor);
+                    text-align: left;
+
+                    .more-loc {
+                        margin-bottom: 5px;
+
+                    }
+
+                    .more-specific {
+                        >span {
+                            margin-right: 5px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .content-func {
+            padding: 20px 0;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .func-price {
+                padding-right: 30px;
+                .price-icon {
+                    color: var(--color-text-minor);
+                    font-size: 30px;
+                    margin-right: 10px;
+
+                }
+
+                .price-amount {
+                    font-size: 40px;
+                    color: var(--color-subject-main);
+
+
+                }
+
+            }
+
+            .func-btn {
+                display: flex;
+
+                :global {
+                    .ant-btn {
+                        width: 150px;
+                        height: 40px;
+                        font-size: 15px;
+                        font-weight: 500;
+                        border-color: var(--color-text-minor) ;
+
+                        &:hover {
+                            color: var(--color-subject-main) !important;
+                            border-color: var(--color-subject-main) ;
+                        }
+
+                        &:active {
+                            border-color: var(--color-subject-main) ;
+                        }
+
+                        &:focus {
+                            border-color: var(--color-text-white) ;
+                        }
+
+                    }
+                }
+
+                .func-btn-cancel {
+                    margin-right: 20px;
+                }
+
+                .func-btn-purchase {}
+
+            }
+
+        }
+
     }
-    
+
 }
