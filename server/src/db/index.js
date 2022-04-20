@@ -4,10 +4,10 @@ export default (db) => {
   const connect = () => {
     mongoose
       .connect(db, {
-        useCreateIndex: true,
+        // useCreateIndex: true,
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useFindAndModify: false,
+        // useFindAndModify: false,
       })
       .then(() => {
         return console.log(`Successfully connected to ${db}`);
