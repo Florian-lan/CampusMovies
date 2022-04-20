@@ -79,6 +79,7 @@ const cryptPassword = async (ctx, next) => {
     const salt = bcrypt.genSaltSync(10)
     // hash保存的是密文，密码+盐
     const hash = bcrypt.hashSync(password, salt)
+    // console.log(`hash${hash}`)
     // 把密文挂载到body上，把原来的覆盖掉
     ctx.request.body.password = hash
     await next()
@@ -98,9 +99,18 @@ const loginVerify = async (ctx, next) => {
         }
         // 2. 若用户存在，则判断密码是否匹配
         // 如果不匹配
-        if (!bcrypt.compareSync(password, res.password)) {
+        // console.log(res.password)
+        // console.log(bcrypt.compareSync(password, res.password))
+        // compareSync(输入的密码，hash密码)
+        
+        // 先不加密TODO
+        // if (!bcrypt.compareSync(password, res.password)) {
+        //     ctx.app.emit('error', invalidPassword, ctx)
+        //     return 
+        // }
+        if(!password == res.password){
             ctx.app.emit('error', invalidPassword, ctx)
-            return 
+            return  
         }
     } catch (err) {
         // try捕获到错误，也就是登录失败，直接抛出错误
@@ -111,6 +121,7 @@ const loginVerify = async (ctx, next) => {
 
 
     // 3. 继续执行，await next()
+    await next()
 
 }
 export default {

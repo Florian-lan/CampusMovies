@@ -15,4 +15,5 @@ export default (err, ctx) => {
     }
     ctx.status = status
     ctx.body = err
+    console.log(`errHandle ${err}`)
 }
