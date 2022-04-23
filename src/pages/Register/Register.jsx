@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.scss'
-import { Form, Input, Button, Checkbox, Cascader } from 'antd';
+import { Form, Input, Button, Checkbox, Cascader, ConfigProvider } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import ConfirmBtn from "../../components/ConfirmBtn/ConfirmBtn";
 
@@ -63,6 +63,11 @@ const Register = () => {
     const handleRegister = () => {
         console.log("register")
     }
+
+    ConfigProvider.config({
+        primaryColor: '#000000',
+      });
+
     return (
         <>
             <div className="register-content-wrapper">

@@ -4,7 +4,7 @@ import { Drawer } from 'antd'
 import ConfirmBtn from '../ConfirmBtn/ConfirmBtn'
 import { ShoppingOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
-import { addPurchasedInfo, removePurchasedInfo } from '../../redux/movieReducers/action'
+import { addPurchasedInfo, removePurchasedInfo } from '../../store/movieStore/action'
 import { find } from 'lodash'
 
 const PurchaseDrawer = ({

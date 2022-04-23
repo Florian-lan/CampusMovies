@@ -5,13 +5,19 @@ import { Provider } from 'react-redux'
 import App from './App'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.css';
-import store from './redux/movieReducers/store'
+// import store from './store/movieReducers/store'
+import store from './store/index'
+import { ConfigProvider } from 'antd'
 
 
 // test
 ReactDom.render(
-    <Provider store={store}>
-        <App />
-    </Provider>
+    <ConfigProvider direction='ltr'>
+
+
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </ConfigProvider>
     ,
     document.getElementById('root'))

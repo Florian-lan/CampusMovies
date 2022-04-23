@@ -54,17 +54,17 @@ const Header = () => {
                             <Menu onClick={handleClick}  selectedKeys={[location.pathname]} mode="horizontal">
 
                                 <Menu.Item key="/home">
-                                    <a href="/" target="_blank" rel="noopener noreferrer">
+                                    <a href="/" target="_self" rel="noopener noreferrer">
                                         主页
                                     </a>
                                 </Menu.Item>
                                 <Menu.Item key="/store">
-                                    <a href="/store" target="_blank" rel="noopener noreferrer">
+                                    <a href="/store" target="_self" rel="noopener noreferrer">
                                         影库
                                     </a>
                                 </Menu.Item>
                                 <Menu.Item key="/personal">
-                                    <a href="/personal" target="_blank" rel="noopener noreferrer">
+                                    <a href="/personal" target="_self" rel="noopener noreferrer">
                                         我的
                                     </a>
                                 </Menu.Item>

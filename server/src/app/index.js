@@ -1,6 +1,7 @@
 import Koa from 'koa';
 // 导入路由
-import userRouter from '../routes/user.js'
+import userRouter from '../routes/user.router.js'
+// import router from '../routes/index.cjs'
 
 import KoaBody from 'koa-body'
 import connectDB from '../db/index.js'
@@ -21,7 +22,8 @@ app
 //   .use(cors())
   .use(KoaBody())
   .use(userRouter.routes())
-//   .use(todoRouter.routes());
+//   .use(todoRouter.routes())
+//   .use(router.routes())
 
 // 统一错误处理,对应ctx.app.emit
 // (err,ctx) 对应emit时传入的errType和ctx
