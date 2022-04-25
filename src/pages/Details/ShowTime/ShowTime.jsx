@@ -6,7 +6,7 @@ import PurchaseModal from '../../../components/PurchaseModal/PurchaseModal'
 import PurchaseDrawer from '../../../components/PurchaseDrawer/PurchaseDrawer'
 import { useSelector } from 'react-redux'
 import { findIndex, template, find } from 'lodash'
-import { setPurchasedInfo } from '../../../redux/movieReducers/action'
+import { setPurchasedInfo } from '../../../store/movieStore/action'
 
 const ShowTime = (
     {

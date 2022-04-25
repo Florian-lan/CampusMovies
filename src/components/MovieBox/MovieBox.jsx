@@ -8,7 +8,8 @@ import PropTypes from 'prop-types';
 import MovieModal from "../MovieModal/MovieModal";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addCollectionInfo, removeCollectionInfo, setLikeStatus } from "../../redux/movieReducers/action";
+import { addCollectionInfo, removeCollectionInfo, setLikeStatus } from '../../store/movieStore/action'
+
 import { add, findIndex } from "lodash";
 import { clear } from "@testing-library/user-event/dist/clear";
 

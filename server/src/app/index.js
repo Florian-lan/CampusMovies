@@ -1,7 +1,7 @@
 import Koa from 'koa';
 // 导入路由
 import userRouter from '../routes/user.js'
-
+// import router from '../routes/index.cjs'
 import KoaBody from 'koa-body'
 import connectDB from '../db/index.js'
 import Config from '../config/config.default.js'
