@@ -3,18 +3,20 @@ import './style.scss'
 import { Form, Input, Button, Checkbox, Space, Cascader} from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import ConfirmBtn from "../../components/ConfirmBtn/ConfirmBtn";
-
+import {useDispatch} from 'react-redux'
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
-
-
+import {login} from '../../store/userStore/action'
 
 
 const Login = () => {
 
   
+    const dispatch = useDispatch()
 
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
+        const {user_name,password} = values
+        dispatch(login({user_name,password}))
     };
     const handleLogin = () => {
         console.log("login")
@@ -44,7 +46,7 @@ const Login = () => {
                     >
                        
                         <Form.Item
-                            name="username"
+                            name="user_name"
                             rules={[
                                 {
                                     required: true,
@@ -94,7 +96,7 @@ const Login = () => {
                                 text="登录"
                                 loading={false}
                                 className="login-form-button"
-                                onClick={handleLogin}
+                                // onClick={handleLogin}
                                 type="primary"
                                 htmlType="submit"
                             >

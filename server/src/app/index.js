@@ -1,6 +1,6 @@
 import Koa from 'koa';
 // 导入路由
-import userRouter from '../routes/user.js'
+import userRouter from '../routes/user.router.js'
 // import router from '../routes/index.cjs'
 import KoaBody from 'koa-body'
 import connectDB from '../db/index.js'
