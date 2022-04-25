@@ -1,28 +1,35 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import './style.scss'
-import { Form, Input, Button, Checkbox, Space, Cascader} from 'antd';
+import { Form, Input, Button, Checkbox, Space, Cascader } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import ConfirmBtn from "../../components/ConfirmBtn/ConfirmBtn";
-import {useDispatch} from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
-import {login} from '../../store/userStore/action'
+import { login } from '../../store/userStore/action'
 
 
 const Login = () => {
 
-  
+
     const dispatch = useDispatch()
+    // 配合useLocation使用
+    const navigate = useNavigate()
 
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
-        const {user_name,password} = values
-        dispatch(login({user_name,password}))
+        const { user_name, password } = values
+        dispatch(login({ user_name, password }))
+
+        // TODO：判断是否登录成功之后再跳转
+        navigate('../home')
+
     };
     const handleLogin = () => {
         console.log("login")
 
     };
-  
+
     return (
         <>
             <div className="login-content-wrapper">
@@ -43,8 +50,9 @@ const Login = () => {
                             remember: true,
                         }}
                         onFinish={onFinish}
+                        autoComplete="off"
                     >
-                       
+
                         <Form.Item
                             name="user_name"
                             rules={[
@@ -102,8 +110,8 @@ const Login = () => {
                             >
                             </ConfirmBtn>
 
-                           
-                            
+
+
                             <div className="register">
                                 <span className="register-or">
                                     Or

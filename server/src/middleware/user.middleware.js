@@ -18,7 +18,7 @@ const userValidator = async (ctx, next) => {
     // 判断合法性
     if (!user_name || !password) {
         console.error('用户名或密码为空', ctx.request.body)
-        // 封装错误类型
+        // 封装错误类型10001
         ctx.app.emit('error', userFormatError, ctx)
         // ctx.status = 400
         // ctx.body = {
@@ -59,6 +59,7 @@ const userVerify = async (ctx, next) => {
         if (res) {
             // 记录到日志中的错误
             console.error('用户名已经存在', { user_name })
+            // code 10002
             ctx.app.emit('error', userAlreadyExist, ctx)
             return
         }
@@ -108,7 +109,8 @@ const loginVerify = async (ctx, next) => {
         //     ctx.app.emit('error', invalidPassword, ctx)
         //     return 
         // }
-        if(!password == res.password){
+        if(!(password == res.password)){
+            // console.log("密码错误")
             ctx.app.emit('error', invalidPassword, ctx)
             return  
         }

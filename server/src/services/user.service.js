@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs'
 import { TRUE } from 'node-sass'
 
 class UserService {
-    async createUser(user_name, password) {
+    async createUser(user_name, password, university, email) {
         // 插入数据
         // 当键和值名称相同时，可以简写，省略键值对，直接写值
         // User.create(
@@ -17,8 +17,10 @@ class UserService {
         //     }
         //   )
         // await表达式：返回值是promise对象的值（成功或失败）
-        const res = await User.create({ user_name, password })
-        // console.log(aaa)
+        
+        console.log(user_name, password,university,email)
+        const res = await User.create({ user_name, password,university,email})
+        console.log(res)
         return res
     }
     // 这里传入的参数是一个对象，为满足不同的调用对象
@@ -48,18 +50,18 @@ class UserService {
 
     }
     // 考虑复用性所以传参的时候传入一个对象（对象内的属性可增删）
-    async updateById({user_name,password}) {
+    async updateById({ user_name, password }) {
         // 必须要有id的
-        const whereOpt = {user_name}
+        const whereOpt = { user_name }
         const newUser = {}
         // user_name && Object.assign(newUser,{user_name})
-        password && Object.assign(newUser,{password})
+        password && Object.assign(newUser, { password })
 
         console.log(`newUser${newUser}`)
         console.log(whereOpt)
 
         // 返回更新之后的对象
-        const res = await User.findOneAndUpdate(whereOpt,newUser,{returnOriginal: false})
+        const res = await User.findOneAndUpdate(whereOpt, newUser, { returnOriginal: false })
 
         console.log(`res ${res}`)
         return res ? true : false

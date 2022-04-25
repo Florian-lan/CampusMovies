@@ -21,11 +21,11 @@ export default class UserController {
 
         // 1. 获取数据
         // console.log(ctx.request.body)
-        const { user_name, password } = ctx.request.body
-
+        const { user_name, password, university, email = ""} = ctx.request.body
+        // console.log(user_name, password, university, email)
         // 2. 操作数据库
         try {
-            const res = await createUser(user_name, password)
+            const res = await createUser(user_name, password,university,email)
             // console.log(res)
             // 3. 返回结果
             // 将body内容返回到客户端
@@ -41,6 +41,7 @@ export default class UserController {
 
         } catch (err) {
             console.log(err)
+            // 10003 用户注册出错
             ctx.app.emit('error', userRegisterError, ctx)
         }
 
@@ -58,6 +59,7 @@ export default class UserController {
                 message: '用户登录成功',
                 // 返回客户端的信息
                 result: {
+                    user_name: user_name,
                     // 生成token
                     token: jwt.sign(res,JWT_SECRET,{expiresIn:'1d'}),
                 },

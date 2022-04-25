@@ -3,55 +3,74 @@ import './style.scss'
 import { Form, Input, Button, Checkbox, Cascader } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import ConfirmBtn from "../../components/ConfirmBtn/ConfirmBtn";
+import { useDispatch } from 'react-redux';
+import {register} from '../../store/userStore/action'
 
 
 const Register = () => {
 
-
+    // label是显示值
+    // value是提交值
     const options = [
         {
-            value: 'zhejiang',
-            label: 'Zhejiang',
+            value: '北京市',
+            label: '北京市',
             children: [
                 {
-                    value: 'hangzhou',
-                    label: 'Hangzhou',
-                    children: [
-                        {
-                            value: 'xihu',
-                            label: 'West Lake',
-                        },
-                        {
-                            value: 'xiasha',
-                            label: 'Xia Sha',
-                            disabled: true,
-                        },
-                    ],
+                    value: '清华大学',
+                    label: '清华大学',
                 },
+                {
+                    value: '北京大学',
+                    label: '北京大学',
+                },
+                {
+                    value: '中国人民大学',
+                    label: '中国人民大学',
+                },
+                {
+                    value: '北京航空航天大学',
+                    label: '北京航空航天大学',
+
+                },
+                {
+                    value: '北京理工大学',
+                    label: '北京理工大学',
+                }, 
+                {
+                    value: '中国农业大学',
+                    label: '中国农业大学',
+                },
+                {
+
+                }
             ],
         },
         {
-            value: 'jiangsu',
-            label: 'Jiangsu',
+            value: '四川省',
+            label: '四川省',
             children: [
                 {
-                    value: 'nanjing',
-                    label: 'Nanjing',
-                    children: [
-                        {
-                            value: 'zhonghuamen',
-                            label: 'Zhong Hua men',
-                        },
-                    ],
+                    value: '四川大学',
+                    label: '四川大学',
                 },
+                {
+                    value: '电子科技大学',
+                    label: '电子科技大学',
+                }
             ],
         },
+
     ];
+
+    const dispatch = useDispatch()
+
+
 
 
 
     function onChange(value, selectedOptions) {
-        console.log(value, selectedOptions);
+        // console.log(value, selectedOptions);
     }
 
     function filter(inputValue, path) {
@@ -59,6 +78,21 @@ const Register = () => {
     }
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
+        
+        // 剔除passwordSure
+        const {passwordSure,email,user_name,password} = values
+        let {universities} = values
+        console.log(universities)
+
+        const university = universities[1]
+        console.log(university)
+
+
+        dispatch(register({user_name,password,university,email}))
+
+
+
+
     };
     const handleRegister = () => {
         console.log("register")
@@ -83,9 +117,10 @@ const Register = () => {
                             remember: true,
                         }}
                         onFinish={onFinish}
+                        autoComplete='off'
                     >
                         <Form.Item
-                            name="university"
+                            name="universities"
                             label="院校"
                             rules={[
                                 {
@@ -103,7 +138,7 @@ const Register = () => {
                             />
                         </Form.Item>
                         <Form.Item
-                            name="username"
+                            name="user_name"
                             label="学号"
                             rules={[
                                 {
@@ -112,9 +147,9 @@ const Register = () => {
                                 },
                             ]}
                         >
-                            <Input 
-                            // prefix=""
-                            prefix={<UserOutlined className="site-form-item-icon" />} 
+                            <Input
+                                // prefix=""
+                                prefix={<UserOutlined className="site-form-item-icon" />}
                             // placeholder="学号" 
                             />
                         </Form.Item>
@@ -130,14 +165,14 @@ const Register = () => {
                         >
                             <Input.Password
                                 prefix={<LockOutlined className="site-form-item-icon" />}
-                                // placeholder="请输入密码"
+                            // placeholder="请输入密码"
 
 
                             />
 
                         </Form.Item>
                         <Form.Item
-                            name="password"
+                            name="passwordSure"
                             label="确认密码"
                             rules={[
                                 {
@@ -148,14 +183,14 @@ const Register = () => {
                         >
                             <Input.Password
                                 prefix={<LockOutlined className="site-form-item-icon" />}
-                                // placeholder="请输入密码"
+                            // placeholder="请输入密码"
 
 
                             />
 
                         </Form.Item>
                         <Form.Item
-                            name="e-mail"
+                            name="email"
                             label="邮箱"
                             rules={[
                                 {
@@ -167,7 +202,7 @@ const Register = () => {
                             <Input
                                 // prefix={<LockOutlined className="site-form-item-icon" />}
                                 prefix=" "
-                                // placeholder="请输入密码"
+                            // placeholder="请输入密码"
                             />
 
                         </Form.Item>
@@ -182,7 +217,7 @@ const Register = () => {
                                 text="注册"
                                 loading={false}
                                 className="register-form-button"
-                                onClick={handleRegister}
+                                // onClick={handleRegister}
                                 type="primary"
                                 htmlType="submit"
                             >

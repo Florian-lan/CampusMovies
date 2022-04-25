@@ -1,5 +1,5 @@
 import {takeEvery} from 'redux-saga/effects'
-import { login } from './userStore/saga'
+import { login,register} from './userStore/saga'
 import{
     LOGIN,
     REGISTER
@@ -8,4 +8,5 @@ import{
 // 监听所有含副作用的action
 export default function* rootSaga(){
     yield takeEvery(LOGIN,login)
+    yield takeEvery(REGISTER,register)
 }

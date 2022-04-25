@@ -3,10 +3,14 @@ export const LOGIN_SUC = "LOGIN_SUC"
 export const REGISTER = 'REGISTER'
 export const SET_LOADING = "SET_LOADING"
 
-export const login = (loginInfo) => ({
-    type: LOGIN,
-    payload: loginInfo,
-})
+export const login = (loginInfo) => {
+    // console.log(loginInfo)
+    return ({
+        type: LOGIN,
+        payload: loginInfo,
+    })
+
+}
 
 export const register = (registerInfo) => ({
     type: REGISTER,

@@ -6,6 +6,7 @@
 
     .img-wrapper {
         padding-top: 50px;
+
         >img {
             width: 700px;
         }
@@ -39,17 +40,21 @@
                 color: transparent;
             }
         }
-        .ant-form-item{
+
+        .ant-form-item {
             display: flex;
             flex-direction: column;
             margin-bottom: 10px;
-            .ant-form-item-label{
+
+            .ant-form-item-label {
                 text-align: left;
-                >label{
+
+                >label {
                     color: var(--color-text-minor);
-                    margin-bottom: 0; 
+                    margin-bottom: 0;
                 }
-                >label:not(.ant-form-item-required){
+
+                >label:not(.ant-form-item-required) {
                     margin-left: 10px;
                 }
 
@@ -58,6 +63,7 @@
                 //     margin-bottom: 0;
                 // }
             }
+
             .ant-form-item-control {
                 .ant-form-item-control-input {
                     .ant-form-item-control-input-content {
@@ -68,72 +74,72 @@
                                 border-radius: 15px;
                                 background-color: var(--color-black-minus);
                                 color: var(--color-text-white);
-    
+
                                 &:hover {
                                     border-color: var(--color-subject-main) !important;
                                 }
-    
+
                             }
-    
+
                             .ant-select-arrow {
                                 color: var(--color-text-grey);
-    
+
                                 &:hover {
                                     color: var(--color-text-white);
                                 }
-    
+
                             }
-    
+
                             .ant-select-clear {
                                 color: var(--color-text-grey);
                                 background: var(--color-black);
                                 top: 40%;
-    
+
                                 &:hover {
                                     color: var(--color-text-white);
                                 }
                             }
                         }
-    
+
                         .ant-input-affix-wrapper {
                             background-color: var(--color-black-minus);
                             border: 1px solid var(--color-text-minor);
                             border-radius: 15px;
-    
+
                             &:hover {
                                 border-color: var(--color-subject-main) !important;
                             }
-    
+
                             .ant-input-prefix {
                                 color: var(--color-text-white);
-    
+
                             }
-    
+
                             .ant-input-suffix {
                                 .ant-input-password-icon {
                                     color: var(--color-text-grey);
-    
+
                                     &:hover {
                                         color: var(--color-text-white);
                                     }
                                 }
                             }
-    
+
                             .ant-input {
                                 background-color: var(--color-black-minus);
                                 color: var(--color-text-white);
                             }
                         }
-    
+
                         .ant-checkbox-wrapper {
                             color: var(--color-text-grey);
-    
+
                             .ant-checkbox {
                                 .ant-checkbox-inner {
                                     background: var(--color-black-minus);
                                     border: 1px solid var(--color-grey-plus);
                                     border-radius: 3px;
-    
+
                                     &::after {
                                         border: 2px solid var(--color-text-minor);
                                         border-top: 0;
@@ -141,25 +147,25 @@
                                     }
                                 }
                             }
-    
+
                             &:hover {
                                 .ant-checkbox {
                                     .ant-checkbox-inner {
                                         border-color: var(--color-text-minor);
-    
+
                                     }
-    
+
                                 }
                             }
-    
+
                             .ant-checkbox-checked {
                                 &::after {
                                     border-color: var(--color-text-minor);
                                 }
                             }
-    
+
                         }
-    
+
                         .register-form-button {
                             width: 200px;
                             height: 40px;
@@ -168,41 +174,48 @@
                             // margin: 0 20px;
                             margin-top: 20px;
                             border: 1px solid var(--color-text-minor);
-    
+
                             &:hover {
                                 border-color: var(--color-subject-main);
                             }
                         }
+
                         .login {
                             margin-top: 5px;
                             text-align: right;
                             padding-right: 40px;
-    
+
                             .login-or {
                                 margin-right: 5px;
                                 color: var(--color-text-grey);
-    
+
                             }
-    
+
                             .login-link {}
                         }
-    
-    
-    
-    
-                       
+
+
+
+
+
                     }
                 }
-    
+
                 .ant-form-item-explain {
                     margin: 5px 0 10px 0;
                     text-align: left;
                     padding-left: 20px;
                 }
+
+                .ant-input-affix-wrapper>input.ant-input:focus {
+                    box-shadow: inset 0 0 0 1000px #000 !important; // 改变了背景色 
+                }
+
+
             }
 
         }
-        
+
 
     }
 }
@@ -223,6 +236,16 @@
         .ant-cascader-menu-item {
             color: var(--color-text-minor);
             // border-bottom: 1px solid var(--color-grey-plus);
+
+        }
+
+        .ant-cascader-menu-item:hover {
+            background-color: var(--color-grey-plus) !important;
+        }
+
+        .ant-cascader-menu-item.ant-cascader-menu-item-active {
+            background-color: var(--color-grey-plus) !important;
+
         }
 
         .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled) {
@@ -234,3 +257,14 @@
 .ant-select-dropdown-hidden {
     // display: block !important;
 }
+
+
+// input:-internal-autofill-selected {
+//     box-shadow: inset 0 0 0 1000px #000 !important; // 改变了背景色
+//     -webkit-text-fill-color: var(--color-text-white); // 改变了字体颜色
+//     background-color: var(--color-black-minus) !important;
+//     // color: var(--color-text-white) !important;
+//     :focus{
+//         // box-shadow: inset 0 0 0 1000px red !important; // 改变了背景色 
+//     }
+// }

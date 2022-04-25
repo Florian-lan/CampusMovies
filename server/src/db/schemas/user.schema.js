@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
     email:{
       type: String
     },
-    school:{
+    university:{
       type: String
     }
     
