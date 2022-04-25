@@ -10,7 +10,8 @@ import {
     setMovieInfo,
     setCollectionInfo,
     setPurchasedInfo
-} from './store/movieStore/action';
+} from './store/movieStore/action'
+
 
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";

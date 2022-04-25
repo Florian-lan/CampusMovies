@@ -1,4 +1,5 @@
 
+// TODO: 这个文件可以删掉，舍弃了这种方法
 // import path from 'path'
 // import { fileURLToPath } from 'url'
 const fs = require('fs')
