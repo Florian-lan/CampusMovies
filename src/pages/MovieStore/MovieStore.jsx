@@ -16,6 +16,14 @@ const MovieStore = () => {
 
     const [movieModalShow, setMovieModalShow] = useState(false);
     const [movieModalInfo, setMovieModalInfo] = useState();
+    const [loading,setLoading] = useState(false)
+    
+    // 取collectionInfo信息
+    const collectionInfo  = useSelector(state =>{
+        console.log(state.CollectionInfo)
+        // 输出一个数组，元素是喜欢的box对象
+        return state.CollectionInfo.collectionInfoList
+    })
 
     // 取movieInfo信息
     const movieInfoList = useSelector(state => {
@@ -53,6 +61,7 @@ const MovieStore = () => {
                                                         movieInfo={val}
                                                         setMovieModalShow={setMovieModalShow}
                                                         setMovieModalInfo={setMovieModalInfo}
+                                                        setLoading = {setLoading}
 
                                                     />
                                                 )

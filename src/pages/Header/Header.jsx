@@ -34,7 +34,9 @@ const Header = () => {
                     <nav className="navbar navbar-light ">
                         <div className="container">
                             <a className="navbar-brand" href="#">
-                                <img src='/image/logo_Desktop.svg' alt='homepage' width="121" height="31" />
+                                {/* <p className="bg"></p> */}
+                                {/* <img src='/image/logo_Desktop.svg' alt='homepage' width="121" height="31" /> */}
+                                <img className = "logo" src='/image/desktopLogo.svg' alt='homepage' width="119" height="42.85" />
                             </a>
                         </div>
                     </nav>
@@ -54,17 +56,17 @@ const Header = () => {
                             <Menu onClick={handleClick}  selectedKeys={[location.pathname]} mode="horizontal">
 
                                 <Menu.Item key="/home">
-                                    <a href="/" target="_blank" rel="noopener noreferrer">
+                                    <a href="/" target="_top" rel="noopener noreferrer">
                                         主页
                                     </a>
                                 </Menu.Item>
                                 <Menu.Item key="/store">
-                                    <a href="/store" target="_blank" rel="noopener noreferrer">
+                                    <a href="/store" target="_top" rel="noopener noreferrer">
                                         影库
                                     </a>
                                 </Menu.Item>
                                 <Menu.Item key="/personal">
-                                    <a href="/personal" target="_blank" rel="noopener noreferrer">
+                                    <a href="/personal" target="_top" rel="noopener noreferrer">
                                         我的
                                     </a>
                                 </Menu.Item>

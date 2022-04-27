@@ -15,7 +15,7 @@ const initialMovieInfo = {
     movieInfo: {}
 }
 const initialCollectionInfoList = {
-    collectionInfoList: []
+    collectionInfoList: JSON.parse(localStorage.getItem('collectionInfo'))
 }
 
 
@@ -87,10 +87,13 @@ export default {
                 return {...state}
             case REMOVE_COLLECTION:
                 const movieInfoIndex = findIndex(state.collectionInfoList,{ID:payload.ID});
+                // splice在原数组基础上删除元素
                 state.collectionInfoList.splice(movieInfoIndex,1);
                 localStorage.setItem("collectionInfo",JSON.stringify(state.collectionInfoList));
                 return {...state}
+            // 获取state时触发
             default:
+                console.log(state.collectionInfoList)
                 return state;
 
         }

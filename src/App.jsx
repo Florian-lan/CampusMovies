@@ -31,7 +31,9 @@ const App = (props) => {
     }];
     useEffect(() => {
         // 清除缓存数据，测试阶段需要，后续可以删去
-        localStorage.clear();
+        // TODO是否需要清除
+        // localStorage.clear();
+        // console.log("清除缓存数据")
 
         // 基本信息初始化
         if (!localStorage.getItem('movieInfo')) {

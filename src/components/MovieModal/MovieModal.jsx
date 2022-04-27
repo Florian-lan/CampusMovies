@@ -17,6 +17,7 @@ const MovieModal = (props) => {
     // console.log(movieModalInfo)
     const { ID, title, imgName, imgSrc, genres, plots, credits = "" } = movieModalInfo;
     const { director = [], writers = [], stars = [] } = credits;
+    
 
 
     // console.log(credits);
@@ -164,7 +165,8 @@ const MovieModal = (props) => {
                     </div>
                 </div>
 
-                <div className={style["modal-func"]}>
+                {/* TODO: 这个功能不知是否需要 */}
+                <div className={style["modal-func"]} style = {{display:"none"}}>
                     <ConfirmBtn
                         className={style["modal-btn"]}
                         loading={loading}

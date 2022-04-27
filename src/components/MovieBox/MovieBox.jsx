@@ -52,10 +52,11 @@ const MovieBox = (props) => {
         setLikeStatus(true);
         dispatch(addCollectionInfo(movieInfo));
     }
+
+    // 取消喜欢
     const handleRedLike = () => {
         setLikeStatus(false);
         dispatch(removeCollectionInfo(movieInfo));
-
         setLoading(true);
         const timer = setTimeout(()=>{
             setLoading(false);

@@ -14,6 +14,7 @@ const Home = () => {
     const [movieModalShow, setMovieModalShow] = useState(false);
 
     const [movieModalInfo, setMovieModalInfo] = useState();
+    const [loading,setLoading] = useState()
 
 
     // 第一个参数是selector函数，返回的值就是useSelector要返回的值
@@ -58,6 +59,7 @@ const Home = () => {
                                         movieInfo={val}
                                         setMovieModalShow={setMovieModalShow}
                                         setMovieModalInfo={setMovieModalInfo}
+                                        setLoading = {setLoading}
                                     />
                             })
                         }
