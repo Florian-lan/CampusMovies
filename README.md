@@ -67,3 +67,7 @@ npm install --save axios
 ### TODO
 1. 解决在新页面打开的问题
 初步计划，维护三个数据库，分别是影片信息，活动信息，影厅信息，（维护影片和活动的时间）
+
++ 启动数据库 cd /usr/local/mongodb/bin ./mongo
++ 启动服务端 npm run dev
++ 启动客户端 npm start
